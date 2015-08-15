@@ -487,6 +487,11 @@ client_prototype.shutdown = function(client)
     client.network.socket:shutdown()
 end
 
+-- puts the socket back to conn pool (see http://wiki.nginx.org/HttpLuaModule#tcpsock:setkeepalive)
+client_prototype.close = function(client)
+    client.network.socket:setkeepalive()
+end
+
 -- Command pipelining
 
 client_prototype.pipeline = function(client, block)
