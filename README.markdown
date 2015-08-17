@@ -2,6 +2,8 @@
 
 ## About ##
 
+_Forked the library to make it work with nginx-lua module_
+
 redis-lua is a pure Lua client library for the Redis advanced key-value database.
 
 ## Main features ##
